@@ -104,9 +104,7 @@ namespace BookStoreDemo.Controllers
             {
                 return NotFound();
             }
-            //var categories = context.Categories.ToList();
-            //ViewBag.CategoryList = new SelectList(categories, "CategoryId", "CategoryName");
-
+            
             return View(book);
         }
 

@@ -36,7 +36,7 @@ namespace BookStoreDemo.Controllers
             }
             catch (Exception ex)
             {
-                ViewBag.errorMessage = "An error occurred while adding the Book: " + ex.Message;
+                ViewBag.errorMessage = "An error occurred while adding the Category: " + ex.Message;
             }
             return RedirectToAction("AddCategory", "Category");
         }
