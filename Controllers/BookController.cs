@@ -18,7 +18,7 @@ namespace BookStoreDemo.Controllers
         public IActionResult Index()
         {
             var books = context.Books.Include(b => b.Category).ToList();
-            return View(context.Books);
+            return View(books);
         }
 
         public IActionResult AddBook()
