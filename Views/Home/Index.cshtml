@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">Welcome To Book Store</h1>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Books Section</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-center">Add and Modify Books</h6>
+                        <p class="card-text text-center">You can add, edit, and delete books or change book categories.</p>
+                        <div class="text-center">
+                            <a href="~/book/index" class="btn btn-primary btn-sm">Go to Books Section</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Categories Section</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-center">Add and Modify Categories</h6>
+                        <p class="card-text text-center">You can add, edit, and delete categories.</p>
+                        <div class="text-center">
+                            <a href="~/category/index" class="btn btn-primary btn-sm">Go to Categories Section</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BookStoreDemo.Models.Book>
+
+@{
+    ViewData["Title"] = "Books Section";
+}
+
+<h1>Books Section</h1>
+
+<p>
+    <a class="btn btn-primary btn-sm" href="~/Book/AddBook" role="button" target="_blank">Add Book</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+                <td>
+                    <a class="btn btn-outline-secondary btn-sm" asp-action="EditBook" asp-route-id="@item.BookId">Edit</a>
+                    <a class="btn btn-outline-info btn-sm" asp-action="Details" asp-route-id="@item.BookId">Details</a>
+                    <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@item.BookId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
